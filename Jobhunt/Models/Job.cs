@@ -11,7 +11,7 @@
         public string CompanyName { get; set; }
         public string CompnayLogoUrl { get; set; } // URL to the company logo   
         public string SalaryRange { get; set; } // e.g., "$50,000 - $70,000"
-        public DateTime PostedDate { get; set; }
+        public DateTime PostedDate { get; set; } = DateTime.UtcNow; // Default to current date and time
         public int JobCategoryId { get; set; } // Foreign key to JobCategory
         public JobCategory JobCategory { get; set; } // Navigation property
     }
